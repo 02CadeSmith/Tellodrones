@@ -56,18 +56,18 @@ ready = input('\nAre you ready to take flight: ')
 
 
 try:
+
+#Square: Pilot - Sean Gay / CoPilot - Cade Smith
+
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        sendmsg('up 50', 2),
-        sendmsg('speed 35', 2)
-        sendmsg('forward 90', 2)
-
+        sendmsg('up 90', 8)
+        sendmsg('right 90', 8),  sendmsg('down 70', 8), sendmsg('left 90', 8)
         sendmsg('land')
-
         print('\nGreat Flight!!!')
 
     else:
@@ -77,3 +77,8 @@ except KeyboardInterrupt:
 
 breakr = True
 sock.close()
+
+
+# Triangle: Pilot - Cade Smith / Copilot - Sean Gay
+
+# Circle: Pilot - Sean Gay / Copilot - Cade Smith
