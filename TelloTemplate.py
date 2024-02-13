@@ -55,6 +55,7 @@ print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
 
 
+"""
 try:
 
 #Square: Pilot - Sean Gay / CoPilot - Cade Smith
@@ -77,8 +78,56 @@ except KeyboardInterrupt:
 
 breakr = True
 sock.close()
+"""
+
+"""
+    # Triangle: Pilot - Cade Smith / Copilot - Sean Gay
+try:
+
+    if ready.lower() == 'yes':
+        print("\nStarting Drone!\n")
+
+        sendmsg('command', 0)
+        sendmsg('takeoff')
+
+        sendmsg('forward 90', 8), sendmsg('cw 160',8)
+        sendmsg('forward 90', 8), sendmsg('cw 160',8)
+        sendmsg('forward 90', 8)
+
+        sendmsg('land')
+        print('\nGreat Flight!!!')
+
+    else:
+        print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
+except KeyboardInterrupt:
+    sendmsg('emergency')
+
+breakr = True
+sock.close()
+"""
 
 
-# Triangle: Pilot - Cade Smith / Copilot - Sean Gay
+    # Circle: Pilot - Sean Gay / Copilot - Cade Smith
 
-# Circle: Pilot - Sean Gay / Copilot - Cade Smith
+try:
+
+    if ready.lower() == 'yes':
+        print("\nStarting Drone!\n")
+
+        sendmsg('command', 0)
+        sendmsg('takeoff')
+
+        sendmsg("curve -25 , -25   10 ,  25 , 0, 130", 8)
+        sendmsg("curve -25 , -25   10 ,  25 , 0, 130", 8)
+
+
+        sendmsg('land')
+        print('\nGreat Flight!!!')
+
+    else:
+        print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
+except KeyboardInterrupt:
+    sendmsg('emergency')
+
+breakr = True
+sock.close()
