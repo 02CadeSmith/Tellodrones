@@ -117,8 +117,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        sendmsg("curve -25 , -25   10 ,  25 , 0, 130", 8)
-        sendmsg("curve -25 , -25   10 ,  25 , 0, 130", 8)
+        sendmsg("curve -400 , -400   100 ,  400 , 0, 130", 8)
+        sendmsg("curve -400 , -400   100 ,  400 , 0, 130", 8)
 
 
         sendmsg('land')
