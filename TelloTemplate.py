@@ -51,21 +51,27 @@ print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
 
-
 try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
+        sendmsg('battery?')
         sendmsg('takeoff')
 
-        # first hoop
+        # first hoop: seans computer
 
         sendmsg("up 20", 8)
-        sendmsg("forward 255", 8)
+        sendmsg("forward 200", 8)
 
-        # second hoop
-        sendmsg("go 250 0 40 70", 8)
+        # second hoop: cades computer
+        sendmsg("go 205 0 40 70", 10)
+
+        # curve into thrird hoop: seans computer
+
+        sendmsg('curve 125 125 0 0 250 0 50', 8)
+        sendmsg('cw 180', 8)
+        sendmsg('forward 40', 8)
 
         sendmsg('land')
 
