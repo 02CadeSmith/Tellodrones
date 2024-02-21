@@ -73,6 +73,10 @@ try:
         sendmsg('cw 180', 8)
         sendmsg('forward 40', 8)
 
+        # descend and finish: cades computer
+        sendmsg('go 225 0 -75 50', 10)
+        sendmsg('forward 30')
+
         sendmsg('land')
 
         print('\nGreat Flight!!!')
